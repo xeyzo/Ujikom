@@ -4,7 +4,7 @@ from .models import Pembayaran
 from .models import Pasien
 from .models import Polklinik
 from .models import Dokter
-from .models import Pendfataran
+from .models import Pendaftaran
 from .models import Resep
 from .models import Detail
 
@@ -16,6 +16,6 @@ admin.site.register(Pembayaran)
 admin.site.register(Pasien)
 admin.site.register(Polklinik)
 admin.site.register(Dokter)
-admin.site.register(Pendfataran)
+admin.site.register(Pendaftaran)
 admin.site.register(Resep)
 admin.site.register(Detail)
