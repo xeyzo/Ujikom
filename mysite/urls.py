@@ -4,6 +4,7 @@ from django.contrib import admin
 from aplikasi import views
 
 urlpatterns = [
+    path('pendaftaran/', views.pendaftaran, name='pendaftaran'),
     path('', views.home, name='home'),
     path('home/', views.home, name='home'),
     path('index/', views.index, name='index'),

@@ -60,7 +60,7 @@ class Pendaftaran(models.Model):
     no_pendaftaran = models.CharField(max_length=4)
     tanggal_pendaftaran = models.DateField()
     kode_dokter = models.CharField(max_length=1, primary_key='true')
-    kode_pasien = models.CharField(max_length=100)
+    kode_pasien = models.CharField(max_length=4)
     kode_polklinik = models.CharField(max_length=15)
     biaya = models.IntegerField()
     keterangan = models.TextField(default='')

@@ -14,3 +14,7 @@ def home (request):
 
 def login (request):
     return render (request, 'login.html')
+
+def pendaftaran (request):
+    pendaftaran = Pendaftaran.objects.all()
+    return render(request, 'pendaftaran.html', {'pendaftaran': pendaftaran})

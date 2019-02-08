@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>{% block title %}Django Boards{% endblock %}</title>
+    <title>{% block title %}MyApp{% endblock %}</title>
     <link href="https://fonts.googleapis.com/css?family=Peralta" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/app.css' %}">
@@ -38,8 +38,10 @@
   <div class="container">
     <ol class="breadcrumb my-4">
         {% if user.is_authenticated %}
-      <ol><div><a href="/home">Home</a></div></ol>
-      <ol><div><a href="/index">Index</a></div></ol>
+      <ol><div><a href="/home">Dokter</a></div></ol>
+      <ol><div><a href="/index">Pasien</a></div></ol>
+      <ol><div><a href="#">Pembayaran</a></div></ol>
+      <ol><div><a href="/pendaftaran">Pendaftaran</a></div></ol>
         {% else %}
         {% endif %}
       {% block breadcrumb %}
