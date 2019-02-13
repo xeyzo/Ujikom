@@ -4,8 +4,9 @@ from django.contrib import admin
 from aplikasi import views
 
 urlpatterns = [
-    path('pembayaran/', views.pendaftaran, name='pembayaran'),
-    path('pasien/', views.pendaftaran, name='pasien'),
+    path(r'daftar/create/', views.daftar_create, name='daftar_create'),
+    path('pembayaran/', views.pembayaran, name='pembayaran'),
+    path('pasien/', views.pasien, name='pasien'),
     path('pendaftaran/', views.pendaftaran, name='pendaftaran'),
     path('', views.home, name='home'),
     path('home/', views.home, name='home'),

@@ -2,6 +2,9 @@ from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Pendaftaran, Pembayaran, Pasien
+from django.http import JsonResponse
+from django.template.loader import render_to_string
+from .forms import PendaftaranForm
 
 
 def index (request):
@@ -31,3 +34,12 @@ def pembayaran (request):
 def pasien (request):
     pasien = Pasien.objects.all()
     return render(request, 'pasien.html', {'pasien': pasien})
+
+def daftar_create(request):
+    form = PendaftaranForm()
+    context = {'form': form}
+    html_form = render_to_string('action/daftar_pendaftaran.html',
+        context,
+        request=request,
+    )
+    return JsonResponse({'html_form': html_form})

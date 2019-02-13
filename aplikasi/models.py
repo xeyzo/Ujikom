@@ -57,9 +57,9 @@ class Dokter(models.Model):
     tarif = models.IntegerField()
 
 class Pendaftaran(models.Model):
-    no_pendaftaran = models.CharField(max_length=4)
+    no_pendaftaran = models.CharField(max_length=4, primary_key='true')
     tanggal_pendaftaran = models.DateField()
-    kode_dokter = models.CharField(max_length=1, primary_key='true')
+    kode_dokter = models.CharField(max_length=1)
     kode_pasien = models.CharField(max_length=4)
     kode_polklinik = models.CharField(max_length=15)
     biaya = models.IntegerField()
